@@ -104,6 +104,13 @@ h2 {
   margin: 0 0 24px;
 }
 
+*+h2
+/*Dubbel zo veel om margin-collapsing te voorkomen.*/
+
+  {
+  margin-top: 48px;
+}
+
 h3 {
   font-size: 18px;
   line-height: 24px;
@@ -166,6 +173,21 @@ a:visited, a:active {
 
 a:hover, a:focus {
   color: #00E6A1;
+}
+
+/*
+  Components: Author
+*/
+
+.c-author {
+  display: flex;
+  align-items: center;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%
 }
 
 /* Small devices (landscape phones, 576px and up) */

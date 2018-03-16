@@ -41,6 +41,7 @@ html {
   padding: 48px 24px 24px;
   -webkit-font-smoothing: antialiases;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 body {
@@ -175,6 +176,27 @@ a:hover, a:focus {
   color: #00E6A1;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 58px;
+    line-height: 72px;
+  }
+}
+
 /*
   Components: Author
 */
@@ -208,9 +230,58 @@ a:hover, a:focus {
   margin-left: 16px;
 }
 
+@@media (min-width: 992px) {
+  .c-author {
+    display: block;
+  }
+  .c-author__image {
+    margin-bottom: 16px;
+  }
+}
+
+/*
+    Components: Article
+*/
+
+.c-article__header, .c-article__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.c-article__date {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.c-article__header {
+  padding: 24px 24px 0;
+}
+
+.c-article__body {
+  padding: 0 24px;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utilities classes to put specific max widths onto elements.
+*/
+
+.u-max-width-sm {
+  max-width: 36em !important;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .c-article__header {
+    padding: 48px 48px 24;
+  }
+  .c-article__body {
+    padding: 24px 48px;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 
@@ -226,11 +297,30 @@ a:hover, a:focus {
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .c-article__body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .c-article__author {
+    width: 25%;
+    padding-right: 24px;
+  }
+  .c-article__content {
+    width: 75%;
+  }
+  .c-article__image {
+    width: 100%;
+  }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .c-articel__image {
+    width: 100%;
+  }
+}
 
 /*
     Print styles.
